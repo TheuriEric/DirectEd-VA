@@ -1,0 +1,362 @@
+[
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of Prompt Engineering within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Prompt Engineering in Curriculum. Zero-shot prompting is when you ask a model a question without any examples. Few-shot prompting is when you provide a few examples to guide the model's response. What's the main benefit of few-shot prompting?"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of Transformers within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Transformers in Curriculum. The Transformer architecture is a type of neural network that uses self-attention to weigh the importance of different parts of the input sequence. Why is this important for understanding long sentences?"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of Express Middleware within Curriculum at a Beginner difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Middleware in Express.js is most often used for which of the following? a) Frontend rendering b) User authentication and logging c) Database configuration d) Styling webpages. (Answer: b) User authentication and logging)"
+  },
+  {
+    "prompt": "You are a tutor for the UI/UX tech track. Explain the topic of Usability within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Usability in Curriculum. Usability is about how easy a product is to use. A highly usable product is efficient and satisfying. How would you test if an app is easy to use?"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of Express Middleware within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Middleware in Express.js is most often used for which of the following? a) Frontend rendering b) User authentication and logging c) Database configuration d) Styling webpages. (Answer: b) User authentication and logging)"
+  },
+  {
+    "prompt": "You are a tutor for the UI/UX tech track. Explain the topic of Accessibility (WCAG) within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Accessibility (WCAG) in Curriculum. WCAG's POUR principles ensure web content is accessible to everyone. POUR stands for Perceivable, Operable, Understandable, and Robust. What's an example of an 'Operable' component?"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of React State within Curriculum at a Beginner difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Which React Hook is used for managing component-level state? a) useEffect b) useContext c) useState d) useReducer. (Answer: c) useState)"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of Prompt Engineering within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Prompt Engineering in Curriculum. Zero-shot prompting is when you ask a model a question without any examples. Few-shot prompting is when you provide a few examples to guide the model's response. What's the main benefit of few-shot prompting?"
+  },
+  {
+    "prompt": "You are a tutor for the UI/UX tech track. Explain the topic of Accessibility (WCAG) within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Accessibility (WCAG) in Curriculum. WCAG's POUR principles ensure web content is accessible to everyone. POUR stands for Perceivable, Operable, Understandable, and Robust. What's an example of an 'Operable' component?"
+  },
+  {
+    "prompt": "You are an assessment creator for the UI/UX tech track. Create one quiz question for the topic of Prototyping within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: A low-fidelity prototype is characterized by its: a) High-detail, interactive design b) Simplicity and use of paper sketches c) Final code and polished look d) Full database integration. (Answer: b) Simplicity and use of paper sketches)"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of Express Middleware within Curriculum at a Advanced difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Middleware in Express.js is most often used for which of the following? a) Frontend rendering b) User authentication and logging c) Database configuration d) Styling webpages. (Answer: b) User authentication and logging)"
+  },
+  {
+    "prompt": "You are an assessment creator for the Gen AI tech track. Create one quiz question for the topic of Transformers within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: What mechanism allows a Transformer to weigh the importance of different words in a sentence? a) Convolutional layers b) Recurrent loops c) Attention d) Pooling. (Answer: c) Attention)"
+  },
+  {
+    "prompt": "You are an assessment creator for the Gen AI tech track. Create one quiz question for the topic of Prompt Engineering within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: What is the key difference between zero-shot and few-shot prompting? a) Model size b) Number of examples in the prompt c) Training data d) Temperature setting. (Answer: b) Number of examples in the prompt)"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of Transformers within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Transformers in Curriculum. The Transformer architecture is a type of neural network that uses self-attention to weigh the importance of different parts of the input sequence. Why is this important for understanding long sentences?"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of React State within Curriculum at a Beginner difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Which React Hook is used for managing component-level state? a) useEffect b) useContext c) useState d) useReducer. (Answer: c) useState)"
+  },
+  {
+    "prompt": "You are a tutor for the UI/UX tech track. Explain the topic of Accessibility (WCAG) within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Accessibility (WCAG) in Curriculum. WCAG's POUR principles ensure web content is accessible to everyone. POUR stands for Perceivable, Operable, Understandable, and Robust. What's an example of an 'Operable' component?"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of Express Middleware within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Middleware in Express.js is most often used for which of the following? a) Frontend rendering b) User authentication and logging c) Database configuration d) Styling webpages. (Answer: b) User authentication and logging)"
+  },
+  {
+    "prompt": "You are a tutor for the UI/UX tech track. Explain the topic of Usability within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Usability in Curriculum. Usability is about how easy a product is to use. A highly usable product is efficient and satisfying. How would you test if an app is easy to use?"
+  },
+  {
+    "prompt": "You are an assessment creator for the UI/UX tech track. Create one quiz question for the topic of Accessibility (WCAG) within Curriculum at a Beginner difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: According to WCAG, which principle ensures users can interact with all UI components? a) Perceivable b) Operable c) Understandable d) Robust. (Answer: b) Operable)"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of Transformers within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Transformers in Curriculum. The Transformer architecture is a type of neural network that uses self-attention to weigh the importance of different parts of the input sequence. Why is this important for understanding long sentences?"
+  },
+  {
+    "prompt": "You are a tutor for the MERN tech track. Explain the topic of Express Middleware within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Express Middleware in Curriculum. Middleware in Express.js are functions that run in the middle of a request and response cycle. They can modify the request or response objects before they reach the final route handler. What kind of tasks are good for middleware?"
+  },
+  {
+    "prompt": "You are an assessment creator for the Gen AI tech track. Create one quiz question for the topic of RAG within Curriculum at a Advanced difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: What does 'Retrieval' in RAG refer to? a) Retrieving user input b) Retrieving data from an external source c) Retrieving the model\u2019s weights d) Retrieving conversational history. (Answer: b) Retrieving data from an external source)"
+  },
+  {
+    "prompt": "You are an assessment creator for the UI/UX tech track. Create one quiz question for the topic of Prototyping within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: A low-fidelity prototype is characterized by its: a) High-detail, interactive design b) Simplicity and use of paper sketches c) Final code and polished look d) Full database integration. (Answer: b) Simplicity and use of paper sketches)"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of React State within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Which React Hook is used for managing component-level state? a) useEffect b) useContext c) useState d) useReducer. (Answer: c) useState)"
+  },
+  {
+    "prompt": "You are a tutor for the MERN tech track. Explain the topic of Express Middleware within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Express Middleware in Curriculum. Middleware in Express.js are functions that run in the middle of a request and response cycle. They can modify the request or response objects before they reach the final route handler. What kind of tasks are good for middleware?"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of Express Middleware within Curriculum at a Advanced difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Middleware in Express.js is most often used for which of the following? a) Frontend rendering b) User authentication and logging c) Database configuration d) Styling webpages. (Answer: b) User authentication and logging)"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of Express Middleware within Curriculum at a Advanced difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Middleware in Express.js is most often used for which of the following? a) Frontend rendering b) User authentication and logging c) Database configuration d) Styling webpages. (Answer: b) User authentication and logging)"
+  },
+  {
+    "prompt": "You are an assessment creator for the Gen AI tech track. Create one quiz question for the topic of Transformers within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: What mechanism allows a Transformer to weigh the importance of different words in a sentence? a) Convolutional layers b) Recurrent loops c) Attention d) Pooling. (Answer: c) Attention)"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of Prompt Engineering within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Prompt Engineering in Curriculum. Zero-shot prompting is when you ask a model a question without any examples. Few-shot prompting is when you provide a few examples to guide the model's response. What's the main benefit of few-shot prompting?"
+  },
+  {
+    "prompt": "You are an assessment creator for the UI/UX tech track. Create one quiz question for the topic of Accessibility (WCAG) within Curriculum at a Beginner difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: According to WCAG, which principle ensures users can interact with all UI components? a) Perceivable b) Operable c) Understandable d) Robust. (Answer: b) Operable)"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of Express Middleware within Curriculum at a Advanced difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Middleware in Express.js is most often used for which of the following? a) Frontend rendering b) User authentication and logging c) Database configuration d) Styling webpages. (Answer: b) User authentication and logging)"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of RAG within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about RAG in Curriculum. RAG systems improve accuracy by letting the model access external knowledge bases, reducing the risk of making things up. How does this improve factual accuracy?"
+  },
+  {
+    "prompt": "You are an assessment creator for the Gen AI tech track. Create one quiz question for the topic of Prompt Engineering within Curriculum at a Advanced difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: What is the key difference between zero-shot and few-shot prompting? a) Model size b) Number of examples in the prompt c) Training data d) Temperature setting. (Answer: b) Number of examples in the prompt)"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of Transformers within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Transformers in Curriculum. The Transformer architecture is a type of neural network that uses self-attention to weigh the importance of different parts of the input sequence. Why is this important for understanding long sentences?"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of React State within Curriculum at a Beginner difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Which React Hook is used for managing component-level state? a) useEffect b) useContext c) useState d) useReducer. (Answer: c) useState)"
+  },
+  {
+    "prompt": "You are an assessment creator for the Gen AI tech track. Create one quiz question for the topic of Prompt Engineering within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: What is the key difference between zero-shot and few-shot prompting? a) Model size b) Number of examples in the prompt c) Training data d) Temperature setting. (Answer: b) Number of examples in the prompt)"
+  },
+  {
+    "prompt": "You are a tutor for the UI/UX tech track. Explain the topic of Prototyping within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Prototyping in Curriculum. Prototyping involves creating drafts of your product. Low-fidelity prototypes are simple and quick to create, while high-fidelity prototypes are more detailed and interactive. When would you use a low-fidelity prototype?"
+  },
+  {
+    "prompt": "You are a tutor for the MERN tech track. Explain the topic of Express Middleware within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Express Middleware in Curriculum. Middleware in Express.js are functions that run in the middle of a request and response cycle. They can modify the request or response objects before they reach the final route handler. What kind of tasks are good for middleware?"
+  },
+  {
+    "prompt": "You are a tutor for the UI/UX tech track. Explain the topic of Usability within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Usability in Curriculum. Usability is about how easy a product is to use. A highly usable product is efficient and satisfying. How would you test if an app is easy to use?"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of RAG within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about RAG in Curriculum. RAG systems improve accuracy by letting the model access external knowledge bases, reducing the risk of making things up. How does this improve factual accuracy?"
+  },
+  {
+    "prompt": "You are a tutor for the MERN tech track. Explain the topic of Express Middleware within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Express Middleware in Curriculum. Middleware in Express.js are functions that run in the middle of a request and response cycle. They can modify the request or response objects before they reach the final route handler. What kind of tasks are good for middleware?"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of RAG within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about RAG in Curriculum. RAG systems improve accuracy by letting the model access external knowledge bases, reducing the risk of making things up. How does this improve factual accuracy?"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of React State within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Which React Hook is used for managing component-level state? a) useEffect b) useContext c) useState d) useReducer. (Answer: c) useState)"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of Prompt Engineering within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Prompt Engineering in Curriculum. Zero-shot prompting is when you ask a model a question without any examples. Few-shot prompting is when you provide a few examples to guide the model's response. What's the main benefit of few-shot prompting?"
+  },
+  {
+    "prompt": "You are a tutor for the UI/UX tech track. Explain the topic of Accessibility (WCAG) within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Accessibility (WCAG) in Curriculum. WCAG's POUR principles ensure web content is accessible to everyone. POUR stands for Perceivable, Operable, Understandable, and Robust. What's an example of an 'Operable' component?"
+  },
+  {
+    "prompt": "You are an assessment creator for the UI/UX tech track. Create one quiz question for the topic of Accessibility (WCAG) within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: According to WCAG, which principle ensures users can interact with all UI components? a) Perceivable b) Operable c) Understandable d) Robust. (Answer: b) Operable)"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of Transformers within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Transformers in Curriculum. The Transformer architecture is a type of neural network that uses self-attention to weigh the importance of different parts of the input sequence. Why is this important for understanding long sentences?"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of Prompt Engineering within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Prompt Engineering in Curriculum. Zero-shot prompting is when you ask a model a question without any examples. Few-shot prompting is when you provide a few examples to guide the model's response. What's the main benefit of few-shot prompting?"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of Prompt Engineering within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Prompt Engineering in Curriculum. Zero-shot prompting is when you ask a model a question without any examples. Few-shot prompting is when you provide a few examples to guide the model's response. What's the main benefit of few-shot prompting?"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of React State within Curriculum at a Beginner difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Which React Hook is used for managing component-level state? a) useEffect b) useContext c) useState d) useReducer. (Answer: c) useState)"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of Transformers within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Transformers in Curriculum. The Transformer architecture is a type of neural network that uses self-attention to weigh the importance of different parts of the input sequence. Why is this important for understanding long sentences?"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of RAG within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about RAG in Curriculum. RAG systems improve accuracy by letting the model access external knowledge bases, reducing the risk of making things up. How does this improve factual accuracy?"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of Express Middleware within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Middleware in Express.js is most often used for which of the following? a) Frontend rendering b) User authentication and logging c) Database configuration d) Styling webpages. (Answer: b) User authentication and logging)"
+  },
+  {
+    "prompt": "You are a tutor for the MERN tech track. Explain the topic of React State within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about React State in Curriculum. State is data that changes over time and affects how a component renders. You can manage it with hooks like `useState`. What's one example of a piece of data you would manage with state?"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of Express Middleware within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Middleware in Express.js is most often used for which of the following? a) Frontend rendering b) User authentication and logging c) Database configuration d) Styling webpages. (Answer: b) User authentication and logging)"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of RAG within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about RAG in Curriculum. RAG systems improve accuracy by letting the model access external knowledge bases, reducing the risk of making things up. How does this improve factual accuracy?"
+  },
+  {
+    "prompt": "You are a tutor for the UI/UX tech track. Explain the topic of Usability within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Usability in Curriculum. Usability is about how easy a product is to use. A highly usable product is efficient and satisfying. How would you test if an app is easy to use?"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of RAG within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about RAG in Curriculum. RAG systems improve accuracy by letting the model access external knowledge bases, reducing the risk of making things up. How does this improve factual accuracy?"
+  },
+  {
+    "prompt": "You are an assessment creator for the UI/UX tech track. Create one quiz question for the topic of Prototyping within Curriculum at a Beginner difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: A low-fidelity prototype is characterized by its: a) High-detail, interactive design b) Simplicity and use of paper sketches c) Final code and polished look d) Full database integration. (Answer: b) Simplicity and use of paper sketches)"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of Express Middleware within Curriculum at a Beginner difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Middleware in Express.js is most often used for which of the following? a) Frontend rendering b) User authentication and logging c) Database configuration d) Styling webpages. (Answer: b) User authentication and logging)"
+  },
+  {
+    "prompt": "You are an assessment creator for the UI/UX tech track. Create one quiz question for the topic of Prototyping within Curriculum at a Advanced difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: A low-fidelity prototype is characterized by its: a) High-detail, interactive design b) Simplicity and use of paper sketches c) Final code and polished look d) Full database integration. (Answer: b) Simplicity and use of paper sketches)"
+  },
+  {
+    "prompt": "You are a tutor for the UI/UX tech track. Explain the topic of Accessibility (WCAG) within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Accessibility (WCAG) in Curriculum. WCAG's POUR principles ensure web content is accessible to everyone. POUR stands for Perceivable, Operable, Understandable, and Robust. What's an example of an 'Operable' component?"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of Prompt Engineering within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Prompt Engineering in Curriculum. Zero-shot prompting is when you ask a model a question without any examples. Few-shot prompting is when you provide a few examples to guide the model's response. What's the main benefit of few-shot prompting?"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of MongoDB Queries within Curriculum at a Beginner difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: What operator finds documents where an array field contains all the specified elements? a) $in b) $all c) $elemMatch d) $each. (Answer: b) $all)"
+  },
+  {
+    "prompt": "You are an assessment creator for the UI/UX tech track. Create one quiz question for the topic of Usability within Curriculum at a Advanced difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Which of the following best describes usability? a) How visually appealing a product is b) How quickly users can accomplish tasks with a product c) The speed of a website d) How many features a product has. (Answer: b) How quickly users can accomplish tasks with a product)"
+  },
+  {
+    "prompt": "You are a tutor for the MERN tech track. Explain the topic of Express Middleware within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Express Middleware in Curriculum. Middleware in Express.js are functions that run in the middle of a request and response cycle. They can modify the request or response objects before they reach the final route handler. What kind of tasks are good for middleware?"
+  },
+  {
+    "prompt": "You are a tutor for the UI/UX tech track. Explain the topic of Prototyping within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Prototyping in Curriculum. Prototyping involves creating drafts of your product. Low-fidelity prototypes are simple and quick to create, while high-fidelity prototypes are more detailed and interactive. When would you use a low-fidelity prototype?"
+  },
+  {
+    "prompt": "You are an assessment creator for the Gen AI tech track. Create one quiz question for the topic of Prompt Engineering within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: What is the key difference between zero-shot and few-shot prompting? a) Model size b) Number of examples in the prompt c) Training data d) Temperature setting. (Answer: b) Number of examples in the prompt)"
+  },
+  {
+    "prompt": "You are an assessment creator for the Gen AI tech track. Create one quiz question for the topic of Transformers within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: What mechanism allows a Transformer to weigh the importance of different words in a sentence? a) Convolutional layers b) Recurrent loops c) Attention d) Pooling. (Answer: c) Attention)"
+  },
+  {
+    "prompt": "You are an assessment creator for the UI/UX tech track. Create one quiz question for the topic of Accessibility (WCAG) within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: According to WCAG, which principle ensures users can interact with all UI components? a) Perceivable b) Operable c) Understandable d) Robust. (Answer: b) Operable)"
+  },
+  {
+    "prompt": "You are a tutor for the UI/UX tech track. Explain the topic of Usability within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Usability in Curriculum. Usability is about how easy a product is to use. A highly usable product is efficient and satisfying. How would you test if an app is easy to use?"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of Prompt Engineering within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Prompt Engineering in Curriculum. Zero-shot prompting is when you ask a model a question without any examples. Few-shot prompting is when you provide a few examples to guide the model's response. What's the main benefit of few-shot prompting?"
+  },
+  {
+    "prompt": "You are a tutor for the UI/UX tech track. Explain the topic of Prototyping within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Prototyping in Curriculum. Prototyping involves creating drafts of your product. Low-fidelity prototypes are simple and quick to create, while high-fidelity prototypes are more detailed and interactive. When would you use a low-fidelity prototype?"
+  },
+  {
+    "prompt": "You are a tutor for the UI/UX tech track. Explain the topic of Usability within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about Usability in Curriculum. Usability is about how easy a product is to use. A highly usable product is efficient and satisfying. How would you test if an app is easy to use?"
+  },
+  {
+    "prompt": "You are an assessment creator for the Gen AI tech track. Create one quiz question for the topic of Prompt Engineering within Curriculum at a Beginner difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: What is the key difference between zero-shot and few-shot prompting? a) Model size b) Number of examples in the prompt c) Training data d) Temperature setting. (Answer: b) Number of examples in the prompt)"
+  },
+  {
+    "prompt": "You are an assessment creator for the UI/UX tech track. Create one quiz question for the topic of Prototyping within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: A low-fidelity prototype is characterized by its: a) High-detail, interactive design b) Simplicity and use of paper sketches c) Final code and polished look d) Full database integration. (Answer: b) Simplicity and use of paper sketches)"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of RAG within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about RAG in Curriculum. RAG systems improve accuracy by letting the model access external knowledge bases, reducing the risk of making things up. How does this improve factual accuracy?"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of RAG within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about RAG in Curriculum. RAG systems improve accuracy by letting the model access external knowledge bases, reducing the risk of making things up. How does this improve factual accuracy?"
+  },
+  {
+    "prompt": "You are a tutor for the MERN tech track. Explain the topic of MongoDB Queries within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about MongoDB Queries in Curriculum. MongoDB uses JSON-like documents. You can use query operators like `$gt` (greater than) to find documents. For example, to find all users over 25. How would you find all posts from a specific date?"
+  },
+  {
+    "prompt": "You are an assessment creator for the UI/UX tech track. Create one quiz question for the topic of Accessibility (WCAG) within Curriculum at a Beginner difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: According to WCAG, which principle ensures users can interact with all UI components? a) Perceivable b) Operable c) Understandable d) Robust. (Answer: b) Operable)"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of RAG within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about RAG in Curriculum. RAG systems improve accuracy by letting the model access external knowledge bases, reducing the risk of making things up. How does this improve factual accuracy?"
+  },
+  {
+    "prompt": "You are an assessment creator for the Gen AI tech track. Create one quiz question for the topic of Prompt Engineering within Curriculum at a Beginner difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: What is the key difference between zero-shot and few-shot prompting? a) Model size b) Number of examples in the prompt c) Training data d) Temperature setting. (Answer: b) Number of examples in the prompt)"
+  },
+  {
+    "prompt": "You are an assessment creator for the UI/UX tech track. Create one quiz question for the topic of Prototyping within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: A low-fidelity prototype is characterized by its: a) High-detail, interactive design b) Simplicity and use of paper sketches c) Final code and polished look d) Full database integration. (Answer: b) Simplicity and use of paper sketches)"
+  },
+  {
+    "prompt": "You are an assessment creator for the Gen AI tech track. Create one quiz question for the topic of Transformers within Curriculum at a Beginner difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: What mechanism allows a Transformer to weigh the importance of different words in a sentence? a) Convolutional layers b) Recurrent loops c) Attention d) Pooling. (Answer: c) Attention)"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of RAG within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about RAG in Curriculum. RAG systems improve accuracy by letting the model access external knowledge bases, reducing the risk of making things up. How does this improve factual accuracy?"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of Express Middleware within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Middleware in Express.js is most often used for which of the following? a) Frontend rendering b) User authentication and logging c) Database configuration d) Styling webpages. (Answer: b) User authentication and logging)"
+  },
+  {
+    "prompt": "You are an assessment creator for the UI/UX tech track. Create one quiz question for the topic of Prototyping within Curriculum at a Intermediate difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: A low-fidelity prototype is characterized by its: a) High-detail, interactive design b) Simplicity and use of paper sketches c) Final code and polished look d) Full database integration. (Answer: b) Simplicity and use of paper sketches)"
+  },
+  {
+    "prompt": "You are an assessment creator for the MERN tech track. Create one quiz question for the topic of Express Middleware within Curriculum at a Beginner difficulty level. Provide multiple-choice options and the correct answer.",
+    "completion": "Quiz: Middleware in Express.js is most often used for which of the following? a) Frontend rendering b) User authentication and logging c) Database configuration d) Styling webpages. (Answer: b) User authentication and logging)"
+  },
+  {
+    "prompt": "You are a tutor for the MERN tech track. Explain the topic of React State within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about React State in Curriculum. State is data that changes over time and affects how a component renders. You can manage it with hooks like `useState`. What's one example of a piece of data you would manage with state?"
+  },
+  {
+    "prompt": "You are a tutor for the Gen AI tech track. Explain the topic of RAG within Curriculum in a clear, encouraging tone. End with a question to test the student's understanding.",
+    "completion": "Hello! Let's talk about RAG in Curriculum. RAG systems improve accuracy by letting the model access external knowledge bases, reducing the risk of making things up. How does this improve factual accuracy?"
+  }
+]

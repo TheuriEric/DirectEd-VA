@@ -1,0 +1,8 @@
+langchain
+langserve
+langsmith
+openai
+chromadb
+fastapi
+pydantic
+uvicorn
