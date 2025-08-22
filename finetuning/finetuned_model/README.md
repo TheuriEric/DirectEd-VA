@@ -128,7 +128,7 @@ Cite TRL as:
   title = {DirectEd Curriculum Bot},
   year = {2025},
   publisher = {Hugging Face},
-  howpublished = {\url{https://huggingface.co/sidiushindi/DirectEd-Curriculum-Bot}}
+  howpublished = https://huggingface.co/sidiushindi/DirectEd-Curriculum-Bot
 }
 
 ```
