@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from langserve import add_routes
 from langchain.schema.runnable import RunnableLambda
 from pydantic import BaseModel
@@ -40,6 +41,17 @@ app = FastAPI(
     description="Backend for the DirectEd educational platform.",
     version="1.0.0"
 )
+
+origins = [
+    "*"
+]
+
+app.add_middleware(CORSMiddleware,
+                   allow_origins=origins,
+                   allow_methods = ["*"],
+                   allow_credentials = True,
+                   allow_headers = ["*"]
+                   )
 
 add_routes(app, educational_chain, path="/assistant")
 
