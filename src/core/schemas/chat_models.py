@@ -22,3 +22,7 @@ class AnalyticsResponse(BaseModel):
     user_id: str
     completed_quizzes: list
     struggling_topics: list
+
+class ContentGenerateResponse(BaseModel):
+    subject: str
+    content: str

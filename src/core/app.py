@@ -3,7 +3,7 @@ from typing import Optional
 from langserve import add_routes
 from chatbot import *
 from components import LearningAnalyzer
-from src.schemas.chat_models import ChatRequest, ChatResponse
+from src.core.schemas.chat_models import ChatRequest, ChatResponse
 import uvicorn
 
 app = FastAPI(
