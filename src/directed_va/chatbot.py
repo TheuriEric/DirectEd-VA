@@ -1,4 +1,23 @@
 from components import *
+from langchain_groq import ChatGroq
+from dotenv import load_dotenv
+
+from data_handlers import retriever
+import os
+
+load_dotenv()
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+
+
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+llm = ChatGroq(
+    model="openai/gpt-oss-20b",
+    temperature=0.7,
+    reasoning_effort="medium"
+)
+
+educational_retriver = EducationalRetriever(retriever)
+content_generator = ContentGenerator(llm, educational_retriver)
 
 @traceable(run_type="chain")
 def run_educational_assistant(request: str, user_id:str,analyzer: LearningAnalyzer, is_instructor: bool = False) -> Dict[str, Any]:
@@ -33,6 +52,28 @@ def run_educational_assistant(request: str, user_id:str,analyzer: LearningAnalyz
         return {"Error!": "An error occurred during execution.", "details": str(e)}
     
     
-
-
+if __name__ == "__main__":
+    import json
+    analyzer = LearningAnalyzer()
     
+    # Test Case 1: Student requesting tutoring
+    print("Running Test Case 1: Student asks for an explanation.")
+    response1 = run_educational_assistant(
+        "Explain the langchain's use using flashcards", 
+        "student_123", 
+        analyzer
+    )
+    print("\n--- Final Response 1 ---")
+    print(json.dumps(response1, indent=2))
+    
+    print("\n" + "="*50 + "\n")
+    
+    # Test Case 2: Student requesting a quiz
+    print("Running Test Case 2: Student asks for a quiz.")
+    response2 = run_educational_assistant(
+        "Give me a quiz about design.", 
+        "student_123", 
+        analyzer
+    )
+    print("\n--- Final Response 2 ---")
+    print(json.dumps(response2, indent=2))
