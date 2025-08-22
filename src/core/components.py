@@ -78,9 +78,7 @@ class ContentGenerator:
         prompt_template = PromptTemplate.from_template(
             """
             You are an AI tutor. 
-            Use ONLY the provided 'Content' to form your answer. 
-            If the content does not contain the answer, say so.
-
+           
             Question: {question}
             Content: {content}
 
@@ -93,6 +91,9 @@ class ContentGenerator:
             - Keep answers between **50 and 150 words**.  
             """
         )
+        #  Use ONLY the provided 'Content' to form your answer. 
+        #     If the content does not contain the answer, say so.
+
         return {
             "question": RunnablePassthrough(),
             "content": RunnableLambda(lambda x: x["question"]) | self.retriever
@@ -108,13 +109,14 @@ class ContentGenerator:
             - Four options (A, B, C, D)  
             - The correct answer clearly labeled  
 
-            Use ONLY the provided 'Content'.  
-            If content lacks enough info, say: "Not enough information to create a quiz."
+            
 
             Topic: {topic}  
             Content: {content}  
             """
         )
+        # Use ONLY the provided 'Content'.  
+        #     If content lacks enough info, say: "Not enough information to create a quiz."
         return {
             "topic": RunnablePassthrough(),
             "content": RunnableLambda(lambda x: x["topic"]) | self.retriever
