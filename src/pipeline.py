@@ -1,103 +1,95 @@
-#  Educational Pipeline using Google Gemini
-from langchain.chains import LLMChain, SequentialChain
-from langchain_google_vertexai import ChatGoogleGenerativeAI
-from langchain.callbacks import LangSmithTracer
-from src.templates import (
-    content_retrieval_prompt,
-    adaptive_conversation_prompt,
-    content_generation_prompt,
-    learning_analysis_prompt
+import torch
+import gc
+from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
+from langchain_huggingface import HuggingFacePipeline
+from langchain.prompts import PromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+
+# Load model with memory management
+MODEL_NAME = "sidiushindi/DirectEd-Curriculum-Bot"
+
+print("Loading tokenizer...")
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+
+print("Loading model...")
+# Clear memory first
+if torch.cuda.is_available():
+    torch.cuda.empty_cache()
+gc.collect()
+
+# Load with minimal memory usage
+try:
+    model = AutoModelForCausalLM.from_pretrained(
+        MODEL_NAME, 
+        torch_dtype=torch.float16,
+        low_cpu_mem_usage=True,
+        device_map=None  
+    )
+    
+    # Move to GPU if available, otherwise stay on CPU
+    if torch.cuda.is_available():
+        print("Moving model to GPU...")
+        model = model.to("cuda")
+    else:
+        print("Using CPU...")
+        
+except Exception as e:
+    print(f"Error loading model: {e}")
+    print("Trying CPU-only fallback...")
+    model = AutoModelForCausalLM.from_pretrained(
+        MODEL_NAME, 
+        torch_dtype=torch.float32,
+        low_cpu_mem_usage=True
+    )
+
+if tokenizer.pad_token is None:
+    tokenizer.pad_token = tokenizer.eos_token
+
+# Create pipeline
+print("Creating text generation pipeline...")
+hf_pipe = pipeline("text-generation", model=model, tokenizer=tokenizer, 
+                   max_new_tokens=512, temperature=0.2, return_full_text=False)
+llm = HuggingFacePipeline(pipeline=hf_pipe)
+
+# Define prompts using new syntax
+content_retrieval_prompt = PromptTemplate.from_template(
+    "### Instruction:\nExtract relevant info for: {user_question}\n\nDocuments: {retrieved_documents}\n\n### Response:\n"
 )
 
-MODEL_NAME = "gemini-1.5-flash"
-TEMPERATURE = 0.2
-
-llm = ChatGoogleGenerativeAI(model=MODEL_NAME, temperature=TEMPERATURE)
-
-# Ensure LANGCHAIN_TRACING_V2 and LANGCHAIN_API_KEY environment variables are set.
-tracer = LangSmithTracer(project_name="DirectEd_Education_Pipeline_Gemini")
-
-# Content Retrieval Chain
-# This chain takes user_question and retrieved_documents and generates the retrieved_content.
-content_retrieval_chain = LLMChain(
-    llm=llm,
-    prompt=content_retrieval_prompt,
-    output_key="retrieved_content",
-    callbacks=[tracer]
+conversation_prompt = PromptTemplate.from_template(
+    "### Instruction:\nYou are a {topic} tutor. Answer: {user_question}\n\nContent: {retrieved_content}\n\n### Response:\n"
 )
 
-#  Adaptive Conversation Chain
-# This chain takes the user's question, the topic, and the content retrieved in the previous step. It then generates a response.
-adaptive_conversation_chain = LLMChain(
-    llm=llm,
-    prompt=adaptive_conversation_prompt,
-    output_key="conversation_response",
-    callbacks=[tracer]
-)
+# Create chains using new LCEL syntax
+content_chain = content_retrieval_prompt | llm | StrOutputParser()
+conversation_chain = conversation_prompt | llm | StrOutputParser()
 
-# Content Generation Chain
-# This chain takes the topic, difficulty level, and retrieved content to generate a summary, quiz, and example.
-content_generation_chain = LLMChain(
-    llm=llm,
-    prompt=content_generation_prompt,
-    output_key="generated_content",
-    callbacks=[tracer]
-)
-
-# Learning Analysis Chain
-# This chain takes the full conversation history and generated content to provide a learning analysis.
-learning_analysis_chain = LLMChain(
-    llm=llm,
-    prompt=learning_analysis_prompt,
-    output_key="learning_analysis",
-    callbacks=[tracer]
-)
-
-# SEQUENTIAL PIPELINE
-# This pipeline runs the chains in a defined order.
-# Note: The input_variables list only contains the *initial* inputs to the pipeline.
-# Intermediate inputs (like retrieved_content) are handled automatically.
-education_pipeline = SequentialChain(
-    chains=[
-        content_retrieval_chain,
-        adaptive_conversation_chain,
-        content_generation_chain,
-        learning_analysis_chain
-    ],
-    input_variables=["user_question", "topic", "difficulty_level", "retrieved_documents", "conversation_history"],
-    output_variables=["retrieved_content", "conversation_response", "generated_content", "learning_analysis"],
-    verbose=True
-)
-
-# execution example
-if __name__ == "__main__":
-    # Example inputs
-    user_question = "What are the best practices for creating accessible UI components?"
-    topic = "UI/UX Design"
-    difficulty_level = "Intermediate"
-    retrieved_documents = """
-    # Document 1: Web Content Accessibility Guidelines (WCAG)
-    WCAG provides guidelines for making web content more accessible. Key principles are Perceivable, Operable, Understandable, and Robust (POUR).
-    - Perceivable: Information and user interface components must be presentable to users in ways they can perceive.
-    - Operable: User interface components and navigation must be operable.
-    ... [rest of document] ...
-    """
-    conversation_history = "The student has previously asked about basic design principles and has a solid grasp of visual hierarchy."
-
-    outputs = education_pipeline({
+def run_pipeline(user_question, topic, retrieved_documents):
+    """Run the education pipeline using new LangChain syntax"""
+    print("Step 1: Extracting relevant content...")
+    retrieved_content = content_chain.invoke({
+        "user_question": user_question,
+        "retrieved_documents": retrieved_documents
+    })
+    
+    print("Step 2: Generating response...")
+    response = conversation_chain.invoke({
         "user_question": user_question,
         "topic": topic,
-        "difficulty_level": difficulty_level,
-        "retrieved_documents": retrieved_documents,
-        "conversation_history": conversation_history
+        "retrieved_content": retrieved_content
     })
+    
+    return {"retrieved_content": retrieved_content, "response": response}
 
-    # Display outputs
-    print("\n--- Retrieved Content ---")
-    print(outputs["retrieved_content"])
-    print("\n--- Conversation Response ---")
-    print(outputs["conversation_response"])
-    print("\n--- Generated Content ---")
-    print(outputs["generated_content"])
-    print("\n--- Learning Analysis ---")
-    print(outputs["learning_analysis"])
+# Example usage
+if __name__ == "__main__":
+    result = run_pipeline(
+        user_question="What are UI accessibility best practices?",
+        topic="UI/UX Design",
+        retrieved_documents="WCAG guidelines: Perceivable, Operable, Understandable, Robust. Use alt text, color contrast, keyboard navigation."
+    )
+    
+    print("\n" + "="*50)
+    print("RESULTS:")
+    print("="*50)
+    print("Response:", result["response"])
