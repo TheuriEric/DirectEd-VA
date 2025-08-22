@@ -18,6 +18,7 @@ llm = ChatGroq(
 
 educational_retriver = EducationalRetriever(retriever)
 content_generator = ContentGenerator(llm, educational_retriver)
+analyzer = LearningAnalyzer()
 
 @traceable(run_type="chain")
 def run_educational_assistant(request: str, user_id:str,analyzer: LearningAnalyzer, is_instructor: bool = False) -> Dict[str, Any]:
