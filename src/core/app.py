@@ -1,8 +1,9 @@
 from fastapi import FastAPI, HTTPException, Request
 from typing import Optional
+from langserve import add_routes
 from chatbot import *
 from components import LearningAnalyzer
-from chat_models import ChatRequest, ChatResponse
+from src.core.schemas.chat_models import ChatRequest, ChatResponse
 import uvicorn
 
 app = FastAPI(

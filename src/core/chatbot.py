@@ -1,8 +1,8 @@
-from components import *
+from .components import *
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 
-from data_handlers import retriever
+from .data_handlers import retriever
 import os
 
 load_dotenv()
