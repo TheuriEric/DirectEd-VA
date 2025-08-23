@@ -1,8 +1,13 @@
 langchain
 langserve
 langsmith
-openai
+langchain_groq
+langchain_community
+langchain_chroma
+langchain_google_genai
 chromadb
 fastapi
 pydantic
 uvicorn
+slowapi
+sse_starlette
