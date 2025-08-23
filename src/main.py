@@ -14,6 +14,7 @@ from slowapi.errors import RateLimitExceeded
 from slowapi.middleware import SlowAPIMiddleware
 from dotenv import load_dotenv
 import os
+
 load_dotenv()
 
 LANGSMITH_TRACING="true"
