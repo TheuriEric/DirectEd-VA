@@ -11,15 +11,14 @@ def load_and_format_data(file_path):
     # Converting each entry into a single string for fine-tuning
     formatted_data = []
     for entry in raw_data:
-        # Create a single instruction/response pair
         formatted_example = f"### Instruction:\n{entry['prompt']}\n\n### Response:\n{entry['completion']}"
         formatted_data.append({"text": formatted_example})
 
     return Dataset.from_list(formatted_data)
 
 if __name__ == "__main__":
-    train_data_path = "../data/raw/raw_training_data.json"
-    val_data_path = "../data/raw/raw_validation_data.json"
+    train_data_path = "./data/raw/raw_training_data.json"
+    val_data_path = "./data/raw/raw_validation_data.json"
 
     # Loads and processes the datasets
     train_dataset = load_and_format_data(train_data_path)
