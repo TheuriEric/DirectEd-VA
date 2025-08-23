@@ -1,4 +1,3 @@
-# finetuning/generate_dataset.py
 import json
 import random
 
@@ -47,7 +46,7 @@ def generate_educational_example(track, topic, subtopic, example_type):
         "completion": selected_template["completion_start"] + completion_content
     }
 
-def generate_datasets(num_examples=100):
+def generate_datasets(num_examples=300):
     """Generates and saves the training and validation datasets."""
     tracks = ["Gen AI", "MERN", "UI/UX"]
     topics = {
@@ -81,4 +80,4 @@ def generate_datasets(num_examples=100):
     print(f"Generated {len(val_data)} validation examples.")
 
 if __name__ == "__main__":
-    generate_datasets(num_examples=100)
+    generate_datasets(num_examples=300)
