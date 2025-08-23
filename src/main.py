@@ -12,6 +12,15 @@ from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 from slowapi.middleware import SlowAPIMiddleware
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
+LANGSMITH_TRACING="true"
+LANGSMITH_ENDPOINT="https://api.smith.langchain.com"
+LANGSMITH_API_KEY="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"
+LANGSMITH_PROJECT="DirectEd"
+
 
 limiter = Limiter(key_func=get_remote_address, default_limits=["5/minute"])
 
@@ -46,9 +55,8 @@ app = FastAPI(
     title="DirectEd Educational API",
     description="Backend for the DirectEd educational platform.",
     version="1.0.0",
-    docs_url="/docs",
-    redoc_url="/redoc",
-    openapi_url="/openapi.json"
+    docs_url="/swagger",
+    redoc_url="/redoc"
 )
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
