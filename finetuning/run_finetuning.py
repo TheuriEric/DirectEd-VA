@@ -1,4 +1,3 @@
-# finetuning/run_finetuning.py
 import torch
 from datasets import load_from_disk
 from transformers import (
@@ -10,12 +9,12 @@ from transformers import (
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 from trl import SFTTrainer
 
-# 1. Configuration and Loading Datasets
+#  Configuration and Loading Datasets
 MODEL_NAME = "google/gemma-2b"
 train_dataset = load_from_disk("../data/processed/train")
 val_dataset = load_from_disk("../data/processed/val")
 
-# 2. Load Model with Quantization (crucial for CPU)
+# Load Model with Quantization (cause I am using a CPU)
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_quant_type="nf4",
@@ -28,12 +27,12 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 model = prepare_model_for_kbit_training(model)
 
-# 3. Configure LoRA
+# Configure LoRA
 peft_config = LoraConfig(r=8, lora_alpha=16, lora_dropout=0.05, bias="none", task_type="CAUSAL_LM")
 model = get_peft_model(model, peft_config)
 model.print_trainable_parameters()
 
-# 4. Load Tokenizer and Run Trainer
+# Load Tokenizer and Run Trainer
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 tokenizer.pad_token = tokenizer.eos_token
 training_args = TrainingArguments(
@@ -51,5 +50,5 @@ trainer = SFTTrainer(model=model, train_dataset=train_dataset, eval_dataset=val_
 print("Starting training on CPU. This will be very slow.")
 trainer.train()
 
-# 5. Save the fine-tuned adapters
-trainer.save_model("direct_ed_adapters")
+# Save the fine-tuned adapters
+trainer.save_model("finetuned_adapters")
