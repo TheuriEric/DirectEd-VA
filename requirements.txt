@@ -9,5 +9,12 @@ chromadb
 fastapi
 pydantic
 uvicorn
+torch
+transformers>=4.30.0
+peft>=0.4.0
+accelerate
+bitsandbytes
+huggingface_hub
+sentence-transformers
 slowapi
 sse_starlette
