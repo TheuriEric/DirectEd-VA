@@ -1,8 +1,9 @@
 langchain
 langserve
 langsmith
-openai
+langchain_groq
 chromadb
 fastapi
 pydantic
 uvicorn
+slowapi
