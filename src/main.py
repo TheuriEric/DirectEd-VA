@@ -13,7 +13,6 @@ from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 from slowapi.middleware import SlowAPIMiddleware
 from dotenv import load_dotenv
-from langsmith import add_routes
 import os
 load_dotenv()
 
