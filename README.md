@@ -11,43 +11,45 @@ Learning Analysis: Provides a detailed breakdown of a student's strengths and we
 Fine-Tuned Persona: Uses a fine-tuned LoRA adapter to ensure a consistent, supportive, and knowledgeable persona across all interactions.
 
 ## Project Structure
+```
 .
-├── finetuning/
+├── finetuning/                  # Contains all scripts and notebooks related to the fine-tuning workflow.
 │   ├── finetuned_model/
-│   │   ├── README.md
-│   │   └── finetuning_and_inference.ipynb
-│   ├── generate_dataset.py
-│   ├── prepare_data.py
-│   └── run_finetuning.py
-├── knowledge/
-├── data/
-├── db/
-├── src/
-│   ├── __init__.py
-│   ├── main.py
-│   ├── pipeline.py
-│   ├── templates.py
-│   └── core/
+│   │   ├── README.md            # Documentation for the final fine-tuned model.
+│   │   └── finetuning_and_inference.ipynb # A Jupyter notebook for running fine-tuning and testing model inference.
+│   ├── generate_dataset.py      # Generates a synthetic dataset for fine-tuning the model's behavior.
+│   ├── prepare_data.py          # Prepares and formats the generated dataset for use by the fine-tuning script.
+│   └── run_finetuning.py        # The main Python script to execute the fine-tuning process.
+├── knowledge/                   # Stores raw text documents and data for the RAG (Retrieval-Augmented Generation) system.
+├── data/                        # Contains the prepared datasets used for fine-tuning.
+├── db/                          # The persistent storage location for the ChromaDB vector database.
+├── src/                         # The source code directory for the main FastAPI application.
+│   ├── __init__.py              # An empty file that makes `src` a Python package.
+│   ├── main.py                  # The main entry point for the FastAPI application.
+│   ├── pipeline.py              # Orchestrates the complex, multi-step LangChain workflow.
+│   ├── templates.py             # A library of all the prompt templates used by the LLM chains.
+│   └── core/                    # Contains the core logic and components of the application.
 │       ├── __init__.py
-│       ├── app.py
-│       ├── chatbot.py
-│       ├── components.py
-│       ├── data_handlers.py
-│       ├── api/
+│       ├── app.py               # The FastAPI application instance.
+│       ├── chatbot.py           # The central hub for chatbot logic, integrating all components.
+│       ├── components.py        # Holds reusable classes like the LearningAnalyzer.
+│       ├── data_handlers.py     # Manages the creation and handling of the vector database.
+│       ├── api/                 # The API layer of the application.
 │       │   ├── __init__.py
-│       │   └── endpoints.py
-│       ├── schemas/
+│       │   └── endpoints.py     # Defines the specific API endpoints and their logic.
+│       ├── schemas/             # Defines the data models for API requests and responses.
 │       │   ├── __init__.py
-│       │   └── chat_models.py
-│       └── services/
+│       │   └── chat_models.py   # Pydantic models for chat requests and responses.
+│       └── services/            # Contains the business logic of the application.
 │           ├── __init__.py
-│           └── educational_assistant.py
-├── .dockerignore
-├── .gitignore
-├── Dockerfile
-├── docker-compose.yaml
-├── requirements.txt
-└── trials.ipynb
+│           └── educational_assistant.py # The service that handles the core educational assistant logic.
+├── .dockerignore                # Specifies files and directories to exclude from the Docker build.
+├── .gitignore                   # Specifies files to be ignored by Git (e.g., temporary files, environment variables).
+├── Dockerfile                   # The instructions for building the Docker image of the application.
+├── docker-compose.yaml          # Defines how to run the application's services using Docker Compose.
+├── requirements.txt             # A list of all the Python dependencies required for the project.
+└── trials.ipynb                 # A Jupyter notebook for testing, experimentation, and debugging.
+```
 
 ## Core Technologies
 Python: The primary programming language.
