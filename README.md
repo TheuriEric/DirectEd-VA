@@ -1,54 +1,124 @@
-# DirectedVa Crew
+## 🎓 DirectEd: An Adaptive AI Educational Assistant
+DirectEd is a smart, adaptive educational assistant designed to provide personalized learning experiences. Built with FastAPI and LangChain, it uses a sophisticated multi-step pipeline to answer user questions, generate custom learning content, and provide actionable feedback. The assistant is powered by a large language model fine-tuned with LoRA, enabling it to maintain a specific instructional tone and format.
 
-Welcome to the DirectedVa Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+## ✨ Features
+Adaptive Tutoring: Guides students using a Socratic method, providing hints and encouraging critical thinking rather than just giving answers.
 
-## Installation
+Intelligent Content Generation: Creates tailored educational content, including summaries, quizzes, and examples, based on the student's needs and difficulty level.
 
-Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+Learning Analysis: Provides a detailed breakdown of a student's strengths and weaknesses and suggests personalized next steps.
 
-First, if you haven't already, install uv:
+Fine-Tuned Persona: Uses a fine-tuned LoRA adapter to ensure a consistent, supportive, and knowledgeable persona across all interactions.
 
-```bash
-pip install uv
+## Project Structure
+.
+├── finetuning/
+│   ├── finetuned_model/
+│   │   ├── README.md
+│   │   └── finetuning_and_inference.ipynb
+│   ├── generate_dataset.py
+│   ├── prepare_data.py
+│   └── run_finetuning.py
+├── knowledge/
+├── data/
+├── db/
+├── src/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── pipeline.py
+│   ├── templates.py
+│   └── core/
+│       ├── __init__.py
+│       ├── app.py
+│       ├── chatbot.py
+│       ├── components.py
+│       ├── data_handlers.py
+│       ├── api/
+│       │   ├── __init__.py
+│       │   └── endpoints.py
+│       ├── schemas/
+│       │   ├── __init__.py
+│       │   └── chat_models.py
+│       └── services/
+│           ├── __init__.py
+│           └── educational_assistant.py
+├── .dockerignore
+├── .gitignore
+├── Dockerfile
+├── docker-compose.yaml
+├── requirements.txt
+└── trials.ipynb
+
+## Core Technologies
+Python: The primary programming language.
+
+FastAPI: A modern, high-performance web framework.
+
+LangChain: The framework for building the LLM application pipeline.
+
+Hugging Face: Used for loading models, tokenizers, and running fine-tuning.
+
+PEFT (LoRA): Parameter-Efficient Fine-Tuning for adapting the model with minimal cost.
+
+TRL (Transformer Reinforcement Learning): Provides the SFTTrainer for fine-tuning.
+
+ChromaDB: The vector store for Retrieval-Augmented Generation (RAG).
+
+Docker: For containerization and deployment.
+
+## 🚀 Setup and Installation
+Clone the repository:
+```Bash
+
+git clone https://github.com/TheuriEric/DirectEd-VA.git
+cd DirectEd-VA
+```
+Create a virtual environment:
+
+```Bash
+
+python -m venv venv
+source venv/bin/activate
+Install dependencies:
 ```
 
-Next, navigate to your project directory and install the dependencies:
+```Bash
 
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
+pip install -r requirements.txt
+#Set up API Keys:
+#Create a .env file in the root directory and add your API keys.
+
+
+OPENAI_API_KEY="your-openai-key"
+GROQ_API_KEY="your-groq-key"
 ```
-### Customizing
+## Fine-Tuning Workflow
+The fine-tuning process is separate but essential for improving the model's performance.
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+Generate a Dataset: Run finetuning/generate_dataset.py.
 
-- Modify `src/directed_va/config/agents.yaml` to define your agents
-- Modify `src/directed_va/config/tasks.yaml` to define your tasks
-- Modify `src/directed_va/crew.py` to add your own logic, tools and specific args
-- Modify `src/directed_va/main.py` to add custom inputs for your agents and tasks
+Prepare the Data: Run finetuning/prepare_data.py.
 
-## Running the Project
+Run Fine-Tuning: Use the finetuning/run_finetuning.py to execute the fine-tuning process and save the finetuned_adapters to the finetuned_adapters directory.
 
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
 
-```bash
-$ crewai run
+## Running with Docker
+This project is fully containerized for easy deployment.
+
+Build the Docker image:
+
+```Bash
+
+docker build -t direct-ed-app .
 ```
+Run the application using Docker Compose:
 
-This command initializes the directed_va Crew, assembling the agents and assigning them tasks as defined in your configuration.
+```Bash
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+docker-compose up -d
+```
+This command will build and start your application and any other services defined in the docker-compose.yaml file (e.g., a database).
 
-## Understanding Your Crew
+## Usage
+Once the application is running, the API will be available at http://127.0.0.1:8000. You can test the endpoints using a tool like Postman or by navigating to http://127.0.0.1:8000/docs to use the interactive Swagger UI.
 
-The directed_va Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
-
-## Support
-
-For support, questions, or feedback regarding the DirectedVa Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
-
-Let's create wonders together with the power and simplicity of crewAI.
